@@ -31,10 +31,12 @@ def acesso():
                 print "Senha nao confere !!!\n"
                 break
 
-#        elif (key < len(usuario)):
-#            continue
-    else:
-        print "Usuario nao encontrado na lista !!!\n"
+        elif (key < len(usuario)):
+            continue
+
+        else:
+            print "Usuario nao encontrado na lista !!!\n"
+            break
 
 def imprime():
     for i in range(0,len(usuario)):
