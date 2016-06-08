@@ -2,7 +2,6 @@
 #Importa o modulo sys
 import sys
 
-lista = []
 
 def sai():
     print "Saindo do sistema !!"
@@ -45,8 +44,15 @@ def menu():
     return opcao
 
 def switch(x):
-    dict_options = {1:cadastra,2:acessa,3:sai}
-    dict_options[x]();
+    try:
+        dict_options = {1:cadastra,2:acessa,3:sai}
+        dict_options[x]();
+    except Exception as e:
+        print "Erro: %s"%e
+        print "Opcao invalida"
+
+
+lista = []
 
 if __name__ == '__main__':
 
